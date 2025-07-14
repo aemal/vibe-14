@@ -27,6 +27,20 @@ export interface DragEndEvent {
   } | null;
 }
 
+// Board Actions for useReducer
+export type BoardAction =
+  | { type: 'MOVE_CARD'; payload: { cardId: string; sourceColumnId: ColumnId; destinationColumnId: ColumnId; destinationIndex: number; sourceIndex: number } }
+  | { type: 'ADD_CARD'; payload: { columnId: ColumnId; card: Omit<Card, 'id'> } }
+  | { type: 'EDIT_CARD'; payload: { cardId: string; columnId: ColumnId; updates: Partial<Pick<Card, 'title' | 'description'>> } }
+  | { type: 'DELETE_CARD'; payload: { cardId: string; columnId: ColumnId } }
+  | { type: 'SET_BOARD'; payload: { board: Board } };
+
+// Form data types
+export interface CardFormData {
+  title: string;
+  description: string;
+}
+
 // Column configuration with colors as specified in PRD
 export const COLUMN_CONFIG: Record<ColumnId, { title: string; color: string; bgColor: string }> = {
   backlog: {

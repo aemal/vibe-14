@@ -11,9 +11,17 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@hello-pangea/dnd": "^18.0.1",
+    "@heroicons/react": "^2.2.0",
+    "framer-motion": "^12.23.5",
+    "jest-axe": "^10.0.0",
     "next": "15.3.5",
+    "prettier": "^3.6.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-focus-lock": "^2.13.6",
+    "react-hook-form": "^7.60.0",
+    "react-swipeable": "^7.0.2",
+    "typedoc": "^0.28.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
