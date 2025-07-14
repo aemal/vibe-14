@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Install and Configure Kanban NPM Package
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Research, select, and integrate a well-maintained Kanban NPM package that supports drag-and-drop functionality.
+# Details:
+Based on current research (as of June 2023), '@hello-pangea/dnd' (v16.2.0) is recommended as it's a maintained fork of react-beautiful-dnd. Install it using 'npm install @hello-pangea/dnd'. Create a types file for the package if necessary. Set up the DragDropContext component in the main layout file.
+
+# Test Strategy:
+Create a simple drag-and-drop test component to ensure the package is correctly installed and functioning. Verify TypeScript types are working correctly with the package.

@@ -1,0 +1,11 @@
+# Task ID: 11
+# Title: Implement Accessibility Features
+# Status: pending
+# Dependencies: 3, 4, 5, 6, 7
+# Priority: medium
+# Description: Ensure the Kanban board is accessible to users with disabilities.
+# Details:
+Add proper ARIA labels to all interactive elements. Ensure the application is fully navigable by keyboard. Implement focus management for modals and draggable elements. Use the 'react-focus-lock' library (v2.9.4) for managing focus in modals. Test with screen readers and ensure all content is announced correctly.
+
+# Test Strategy:
+Use automated accessibility testing tools like 'jest-axe' for unit tests. Conduct manual testing with screen readers (e.g., NVDA on Windows, VoiceOver on Mac). Verify keyboard navigation works for all features.

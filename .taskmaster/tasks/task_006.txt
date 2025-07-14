@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: Implement Add Card Functionality
+# Status: pending
+# Dependencies: 4
+# Priority: medium
+# Description: Create a mechanism to add new cards to any column.
+# Details:
+Implement a floating action button (FAB) using @headlessui/react for the 'Add Card' functionality. Create a modal component for the add card form. Include input fields for title (required) and description (optional). Use react-hook-form (v7.44.3) for form handling and validation. Ensure the new card is added to the correct column in the board state.
+
+# Test Strategy:
+Test adding cards to each column. Verify form validation works correctly. Ensure new cards appear immediately in the correct column after addition.

@@ -1,0 +1,11 @@
+# Task ID: 4
+# Title: Implement Card Component
+# Status: pending
+# Dependencies: 3
+# Priority: medium
+# Description: Create a reusable Card component that displays a title and description preview.
+# Details:
+Create a Card component using TypeScript. Use Tailwind CSS for styling, including rounded corners (rounded-lg), drop shadows (shadow-md), and consistent spacing (p-4). Implement hover (hover:shadow-lg) and active (active:shadow-inner) states. Use text truncation for long titles and descriptions. Implement a tooltip for full description on hover using @headlessui/react (v1.7.15).
+
+# Test Strategy:
+Test the Card component in isolation with various lengths of titles and descriptions. Verify hover and active states work correctly. Ensure the tooltip functions properly and displays the full description.

@@ -1,0 +1,11 @@
+# Task ID: 7
+# Title: Implement Edit Card Functionality
+# Status: pending
+# Dependencies: 4, 6
+# Priority: medium
+# Description: Allow users to edit existing cards' titles and descriptions.
+# Details:
+Add an edit button to each Card component. Reuse the modal and form from the Add Card functionality, pre-populating the fields with the current card data. Implement the edit logic to update the board state when a card is modified.
+
+# Test Strategy:
+Test editing cards in each column. Verify that changes are reflected immediately in the UI. Ensure that cancelling an edit does not modify the card.

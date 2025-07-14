@@ -1,0 +1,11 @@
+# Task ID: 10
+# Title: Implement Responsive Design
+# Status: pending
+# Dependencies: 3, 4, 5, 6
+# Priority: high
+# Description: Ensure the Kanban board is fully responsive and works well on both desktop and mobile viewports.
+# Details:
+Use Tailwind's responsive classes to adjust layout for different screen sizes. Implement a column view for mobile devices, allowing users to swipe between columns. Use the 'react-swipeable' library (v7.0.0) for smooth mobile swiping. Ensure all interactive elements are easily tappable on mobile (min 44x44 px touch targets).
+
+# Test Strategy:
+Test the application on various devices and screen sizes. Use Chrome DevTools device emulation for initial testing. Conduct usability tests on actual mobile devices.

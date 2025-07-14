@@ -1,0 +1,116 @@
+# Product Requirement Document (PRD): Kanban Frontend App with Next.js
+
+## Overview
+
+Develop a frontend-only Kanban board application using Next.js and TypeScript. The application will utilize a prebuilt Kanban npm package that supports drag-and-drop functionality. The user will be able to create, edit, and move cards across five color-coded columns: **Backlog**, **In Progress**, **Cancelled**, **Blocked**, and **Completed**.
+
+---
+
+## Goals
+
+* Build a responsive, modern Kanban board UI using Next.js and TypeScript
+* Enable drag-and-drop card movement
+* Allow card creation with title and description
+* Visually distinguish columns with color-coded headers
+
+---
+
+## Technical Requirements
+
+### Framework & Language
+
+* **Next.js** (latest stable version)
+* **TypeScript** for all components and logic
+
+### Kanban Board Functionality
+
+* Use a well-maintained and actively supported **Kanban NPM package** (e.g., `@hello-pangea/dnd` or `dnd-kit`)
+* Enable **drag-and-drop** functionality for cards between columns
+* Create new cards with:
+
+  * **Title** (text input)
+  * **Description** (multiline text input)
+* Columns:
+
+  * **Backlog**
+  * **In Progress**
+  * **Cancelled**
+  * **Blocked**
+  * **Completed**
+
+### UI & Styling
+
+* Each column should have a **distinct background color** for visual differentiation
+
+  * Backlog: Light Blue
+  * In Progress: Light Yellow
+  * Cancelled: Light Red
+  * Blocked: Light Gray
+  * Completed: Light Green
+* Use **modern CSS techniques** (Tailwind CSS preferred, but not required)
+* Ensure **responsive design** for desktop and mobile viewports
+* Apply visually pleasing styling to cards and columns with:
+
+  * Rounded corners
+  * Drop shadows
+  * Consistent spacing
+  * Hover and active states for cards and inputs
+
+---
+
+## Features
+
+### Card Creation
+
+* A floating or inline button to **add a new card** in any column
+* Input modal or inline form to enter:
+
+  * Title (required)
+  * Description (optional)
+
+### Card Management
+
+* **Drag and drop** cards between any of the five columns
+* Each card displays:
+
+  * Title
+  * Description preview or tooltip
+
+### UX Enhancements
+
+* Smooth drag animation
+* Hover effects on cards and column headers
+* Clear visual feedback when dragging over columns
+* Transitions and animations where appropriate
+
+---
+
+## Non-Functional Requirements
+
+* Clean and maintainable TypeScript codebase
+* Modular and reusable component structure
+* No backend or data persistence is required (frontend-only demo)
+* Compatible with all modern browsers
+
+---
+
+## Deliverables
+
+* A fully functional **Next.js TypeScript app** with the described Kanban board
+* Well-organized component directory structure
+* Instructions in `README.md` for running the development server
+
+---
+
+## Out of Scope
+
+* Authentication or user accounts
+* Persistent storage (localStorage, database, etc.)
+* Server-side functionality or APIs
+
+---
+
+## Notes
+
+* The goal is a high-quality frontend user experience for demo or prototyping purposes
+* Avoid using deprecated libraries such as `react-beautiful-dnd`. Prefer actively maintained options like `@hello-pangea/dnd` or `dnd-kit`

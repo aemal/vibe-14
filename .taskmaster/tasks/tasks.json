@@ -1,0 +1,227 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Next.js Project with TypeScript",
+        "description": "Initialize a new Next.js project with TypeScript support and set up the basic project structure.",
+        "details": "Use the latest stable version of Next.js (as of June 2023, it's 13.4.4). Run 'npx create-next-app@latest' with the following options: TypeScript: Yes, ESLint: Yes, Tailwind CSS: Yes (as per PRD preference), src/ directory: Yes, App Router: Yes. After initialization, update tsconfig.json for strict mode and other best practices. Set up a basic folder structure: components/, styles/, types/, utils/.",
+        "testStrategy": "Verify that the project builds without errors. Check that TypeScript compilation succeeds. Ensure all necessary dependencies are installed and the development server runs correctly.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Initialize the Project",
+            "description": "Set up a new project directory and initialize it with a package manager (e.g., npm, yarn, or pnpm). Install base dependencies such as TypeScript.",
+            "dependencies": [],
+            "details": "Run commands like `npm init -y` and `npm install typescript --save-dev` to create the project and add TypeScript support.",
+            "status": "pending"
+          },
+          {
+            "id": 2,
+            "title": "Configure TypeScript and ESLint",
+            "description": "Install and configure ESLint for TypeScript, including necessary plugins and configuration files.",
+            "dependencies": [
+              1
+            ],
+            "details": "Install ESLint, @typescript-eslint/parser, and @typescript-eslint/eslint-plugin. Create an ESLint configuration file (e.g., `.eslintrc.json` or `eslint.config.mjs`) and set up recommended rules for TypeScript. Optionally, use `npx eslint --init` to generate the config interactively.[1][2][3]",
+            "status": "pending"
+          },
+          {
+            "id": 3,
+            "title": "Set Up Tailwind CSS",
+            "description": "Install and configure Tailwind CSS in the project.",
+            "dependencies": [
+              2
+            ],
+            "details": "Install Tailwind CSS and its peer dependencies. Initialize Tailwind configuration files and update your CSS entry point to include Tailwind's directives.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Organize the Folder Structure",
+            "description": "Create a logical folder structure for source code, configuration files, and assets.",
+            "dependencies": [
+              3
+            ],
+            "details": "Set up directories such as `src/` for source code, `public/` for static assets, and ensure configuration files like `tsconfig.json`, `.eslintrc.json`, and `tailwind.config.js` are in the project root.",
+            "status": "pending"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Install and Configure Kanban NPM Package",
+        "description": "Research, select, and integrate a well-maintained Kanban NPM package that supports drag-and-drop functionality.",
+        "details": "Based on current research (as of June 2023), '@hello-pangea/dnd' (v16.2.0) is recommended as it's a maintained fork of react-beautiful-dnd. Install it using 'npm install @hello-pangea/dnd'. Create a types file for the package if necessary. Set up the DragDropContext component in the main layout file.",
+        "testStrategy": "Create a simple drag-and-drop test component to ensure the package is correctly installed and functioning. Verify TypeScript types are working correctly with the package.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement Basic Kanban Board Structure",
+        "description": "Create the basic structure of the Kanban board with five columns: Backlog, In Progress, Cancelled, Blocked, and Completed.",
+        "details": "Create a KanbanBoard component. Implement five Droppable components for each column. Use Tailwind CSS for styling. Apply the specified background colors: Backlog (light blue: bg-blue-100), In Progress (light yellow: bg-yellow-100), Cancelled (light red: bg-red-100), Blocked (light gray: bg-gray-100), Completed (light green: bg-green-100). Ensure responsive design using Tailwind's responsive classes.",
+        "testStrategy": "Verify that all five columns are rendered correctly with appropriate colors. Test responsiveness on different screen sizes. Ensure that the structure adheres to the Kanban package's requirements.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Implement Card Component",
+        "description": "Create a reusable Card component that displays a title and description preview.",
+        "details": "Create a Card component using TypeScript. Use Tailwind CSS for styling, including rounded corners (rounded-lg), drop shadows (shadow-md), and consistent spacing (p-4). Implement hover (hover:shadow-lg) and active (active:shadow-inner) states. Use text truncation for long titles and descriptions. Implement a tooltip for full description on hover using @headlessui/react (v1.7.15).",
+        "testStrategy": "Test the Card component in isolation with various lengths of titles and descriptions. Verify hover and active states work correctly. Ensure the tooltip functions properly and displays the full description.",
+        "priority": "medium",
+        "dependencies": [
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Drag and Drop Functionality",
+        "description": "Enable drag and drop functionality for moving cards between columns.",
+        "details": "Implement the Draggable component from @hello-pangea/dnd for each Card. Create a function to handle the onDragEnd event, updating the state of the Kanban board when a card is moved. Implement smooth drag animation using the package's built-in features. Add visual feedback when dragging over columns using Tailwind's group-hover classes.",
+        "testStrategy": "Test dragging cards between all column combinations. Verify that the board state updates correctly after each drag. Check that animations and visual feedback work as expected.",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Implement Add Card Functionality",
+        "description": "Create a mechanism to add new cards to any column.",
+        "details": "Implement a floating action button (FAB) using @headlessui/react for the 'Add Card' functionality. Create a modal component for the add card form. Include input fields for title (required) and description (optional). Use react-hook-form (v7.44.3) for form handling and validation. Ensure the new card is added to the correct column in the board state.",
+        "testStrategy": "Test adding cards to each column. Verify form validation works correctly. Ensure new cards appear immediately in the correct column after addition.",
+        "priority": "medium",
+        "dependencies": [
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Implement Edit Card Functionality",
+        "description": "Allow users to edit existing cards' titles and descriptions.",
+        "details": "Add an edit button to each Card component. Reuse the modal and form from the Add Card functionality, pre-populating the fields with the current card data. Implement the edit logic to update the board state when a card is modified.",
+        "testStrategy": "Test editing cards in each column. Verify that changes are reflected immediately in the UI. Ensure that cancelling an edit does not modify the card.",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Implement Board State Management",
+        "description": "Create a centralized state management solution for the Kanban board.",
+        "details": "Use React's Context API for state management. Create a KanbanContext to hold the board state and provide methods for adding, editing, and moving cards. Implement useReducer for more predictable state updates. Ensure all components that need access to the board state are wrapped in the KanbanContext.Provider.",
+        "testStrategy": "Write unit tests for the state management logic. Verify that all components can access and update the state correctly. Test complex scenarios like moving cards between columns and editing cards in different states.",
+        "priority": "high",
+        "dependencies": [
+          5,
+          6,
+          7
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Enhance UI with Animations and Transitions",
+        "description": "Add smooth animations and transitions to improve the user experience.",
+        "details": "Use Framer Motion (v10.12.16) for advanced animations. Add entrance animations for new cards. Implement transition animations when cards move between columns. Add micro-interactions like button clicks and hover effects using Tailwind's transition classes.",
+        "testStrategy": "Visually inspect all animations and transitions. Ensure they enhance rather than hinder the user experience. Test on different devices to verify performance.",
+        "priority": "low",
+        "dependencies": [
+          5,
+          6,
+          7
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Implement Responsive Design",
+        "description": "Ensure the Kanban board is fully responsive and works well on both desktop and mobile viewports.",
+        "details": "Use Tailwind's responsive classes to adjust layout for different screen sizes. Implement a column view for mobile devices, allowing users to swipe between columns. Use the 'react-swipeable' library (v7.0.0) for smooth mobile swiping. Ensure all interactive elements are easily tappable on mobile (min 44x44 px touch targets).",
+        "testStrategy": "Test the application on various devices and screen sizes. Use Chrome DevTools device emulation for initial testing. Conduct usability tests on actual mobile devices.",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Implement Accessibility Features",
+        "description": "Ensure the Kanban board is accessible to users with disabilities.",
+        "details": "Add proper ARIA labels to all interactive elements. Ensure the application is fully navigable by keyboard. Implement focus management for modals and draggable elements. Use the 'react-focus-lock' library (v2.9.4) for managing focus in modals. Test with screen readers and ensure all content is announced correctly.",
+        "testStrategy": "Use automated accessibility testing tools like 'jest-axe' for unit tests. Conduct manual testing with screen readers (e.g., NVDA on Windows, VoiceOver on Mac). Verify keyboard navigation works for all features.",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Finalize Documentation and Prepare for Delivery",
+        "description": "Create comprehensive documentation and prepare the project for handover.",
+        "details": "Update the README.md with project overview, setup instructions, and usage guidelines. Document any known issues or limitations. Create JSDoc comments for all components and important functions. Generate API documentation using 'typedoc' (v0.24.7). Ensure the code is well-commented and follows consistent styling (use Prettier v2.8.8 for code formatting).",
+        "testStrategy": "Review all documentation for completeness and clarity. Have a team member follow the setup instructions to verify their accuracy. Run a final lint and type-check to ensure code quality.",
+        "priority": "medium",
+        "dependencies": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-14T17:28:38.964Z",
+      "updated": "2025-07-14T17:28:38.965Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

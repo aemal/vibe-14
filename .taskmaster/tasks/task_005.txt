@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: Implement Drag and Drop Functionality
+# Status: pending
+# Dependencies: 3, 4
+# Priority: high
+# Description: Enable drag and drop functionality for moving cards between columns.
+# Details:
+Implement the Draggable component from @hello-pangea/dnd for each Card. Create a function to handle the onDragEnd event, updating the state of the Kanban board when a card is moved. Implement smooth drag animation using the package's built-in features. Add visual feedback when dragging over columns using Tailwind's group-hover classes.
+
+# Test Strategy:
+Test dragging cards between all column combinations. Verify that the board state updates correctly after each drag. Check that animations and visual feedback work as expected.

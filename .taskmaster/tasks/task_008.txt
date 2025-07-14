@@ -1,0 +1,11 @@
+# Task ID: 8
+# Title: Implement Board State Management
+# Status: pending
+# Dependencies: 5, 6, 7
+# Priority: high
+# Description: Create a centralized state management solution for the Kanban board.
+# Details:
+Use React's Context API for state management. Create a KanbanContext to hold the board state and provide methods for adding, editing, and moving cards. Implement useReducer for more predictable state updates. Ensure all components that need access to the board state are wrapped in the KanbanContext.Provider.
+
+# Test Strategy:
+Write unit tests for the state management logic. Verify that all components can access and update the state correctly. Test complex scenarios like moving cards between columns and editing cards in different states.

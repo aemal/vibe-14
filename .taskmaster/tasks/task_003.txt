@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: Implement Basic Kanban Board Structure
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: Create the basic structure of the Kanban board with five columns: Backlog, In Progress, Cancelled, Blocked, and Completed.
+# Details:
+Create a KanbanBoard component. Implement five Droppable components for each column. Use Tailwind CSS for styling. Apply the specified background colors: Backlog (light blue: bg-blue-100), In Progress (light yellow: bg-yellow-100), Cancelled (light red: bg-red-100), Blocked (light gray: bg-gray-100), Completed (light green: bg-green-100). Ensure responsive design using Tailwind's responsive classes.
+
+# Test Strategy:
+Verify that all five columns are rendered correctly with appropriate colors. Test responsiveness on different screen sizes. Ensure that the structure adheres to the Kanban package's requirements.
