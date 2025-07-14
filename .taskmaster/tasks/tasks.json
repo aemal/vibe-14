@@ -61,7 +61,7 @@
         "dependencies": [
           1
         ],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
@@ -89,7 +89,7 @@
               2
             ],
             "details": "Check if the package includes built-in TypeScript types or if @types/ definitions are required. Adjust TypeScript configuration to recognize the package and resolve any type errors in the IDE.",
-            "status": "in-progress"
+            "status": "done"
           },
           {
             "id": 4,
@@ -99,7 +99,7 @@
               3
             ],
             "details": "Import DragDropContext from the installed package and wrap the main layout or the section that requires drag-and-drop functionality. Implement at least the onDragEnd handler, and optionally others like onDragStart or onDragUpdate, following the package's documentation.",
-            "status": "pending"
+            "status": "done"
           }
         ]
       },
@@ -113,8 +113,57 @@
         "dependencies": [
           2
         ],
-        "status": "pending",
-        "subtasks": []
+        "status": "in-progress",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create the KanbanBoard Component Structure",
+            "description": "Set up the main KanbanBoard component, establishing the foundational layout and preparing for column integration.",
+            "dependencies": [],
+            "details": "Initialize a new React component named KanbanBoard. Set up the basic JSX structure, including a container div that will hold all columns. Ensure the component is ready to accept props or state for dynamic data.",
+            "status": "done"
+          },
+          {
+            "id": 2,
+            "title": "Implement Individual Kanban Columns",
+            "description": "Develop and integrate each Kanban column as a subcomponent within the KanbanBoard, supporting dynamic content.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create a reusable Column component or use directives if leveraging a Kanban package. Add columns such as 'To Do', 'In Progress', 'Testing', and 'Done', ensuring each can render a list of cards or tasks.",
+            "status": "in-progress"
+          },
+          {
+            "id": 3,
+            "title": "Apply Tailwind CSS Styles",
+            "description": "Style the KanbanBoard and its columns using Tailwind CSS for a modern and consistent appearance.",
+            "dependencies": [
+              2
+            ],
+            "details": "Add Tailwind utility classes to the KanbanBoard container, columns, and cards. Ensure spacing, colors, borders, and typography are visually appealing and consistent with design requirements.",
+            "status": "pending"
+          },
+          {
+            "id": 4,
+            "title": "Ensure Responsive Design",
+            "description": "Adapt the KanbanBoard layout and styles to provide a seamless experience across different screen sizes.",
+            "dependencies": [
+              3
+            ],
+            "details": "Use Tailwind's responsive utilities to adjust column stacking, spacing, and card sizing for mobile, tablet, and desktop views. Test the board on various devices and screen widths.",
+            "status": "pending"
+          },
+          {
+            "id": 5,
+            "title": "Verify Integration with Kanban Package",
+            "description": "Integrate and test the KanbanBoard with the chosen Kanban package to ensure full functionality and compatibility.",
+            "dependencies": [
+              4
+            ],
+            "details": "Connect the KanbanBoard to the third-party Kanban package (e.g., Syncfusion, react-beautiful-dnd). Ensure features like drag-and-drop, data binding, and column/card management work as expected.",
+            "status": "pending"
+          }
+        ]
       },
       {
         "id": 4,
@@ -259,7 +308,7 @@
     ],
     "metadata": {
       "created": "2025-07-14T17:28:38.964Z",
-      "updated": "2025-07-14T17:50:44.408Z",
+      "updated": "2025-07-14T18:23:53.752Z",
       "description": "Tasks for master context"
     }
   }
