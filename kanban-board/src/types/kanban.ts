@@ -9,7 +9,6 @@ export interface Card {
 export interface Column {
   id: string;
   title: string;
-  color: string;
   cards: Card[];
 }
 
@@ -29,25 +28,30 @@ export interface DragEndEvent {
 }
 
 // Column configuration with colors as specified in PRD
-export const COLUMN_CONFIG: Record<ColumnId, { title: string; color: string }> = {
+export const COLUMN_CONFIG: Record<ColumnId, { title: string; color: string; bgColor: string }> = {
   backlog: {
     title: 'Backlog',
-    color: 'bg-blue-100 border-blue-300',
+    color: 'border-blue-300 text-blue-800',
+    bgColor: 'bg-blue-50',
   },
   'in-progress': {
     title: 'In Progress', 
-    color: 'bg-yellow-100 border-yellow-300',
+    color: 'border-yellow-300 text-yellow-800',
+    bgColor: 'bg-yellow-50',
   },
   cancelled: {
     title: 'Cancelled',
-    color: 'bg-red-100 border-red-300',
+    color: 'border-red-300 text-red-800',
+    bgColor: 'bg-red-50',
   },
   blocked: {
     title: 'Blocked',
-    color: 'bg-gray-100 border-gray-300',
+    color: 'border-gray-300 text-gray-800',
+    bgColor: 'bg-gray-50',
   },
   completed: {
     title: 'Completed',
-    color: 'bg-green-100 border-green-300',
+    color: 'border-green-300 text-green-800',
+    bgColor: 'bg-green-50',
   },
 }; 

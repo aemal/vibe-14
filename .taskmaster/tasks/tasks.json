@@ -131,7 +131,7 @@
               1
             ],
             "details": "Create a reusable Column component or use directives if leveraging a Kanban package. Add columns such as 'To Do', 'In Progress', 'Testing', and 'Done', ensuring each can render a list of cards or tasks.",
-            "status": "in-progress"
+            "status": "done"
           },
           {
             "id": 3,
@@ -141,7 +141,7 @@
               2
             ],
             "details": "Add Tailwind utility classes to the KanbanBoard container, columns, and cards. Ensure spacing, colors, borders, and typography are visually appealing and consistent with design requirements.",
-            "status": "pending"
+            "status": "done"
           },
           {
             "id": 4,
@@ -151,7 +151,7 @@
               3
             ],
             "details": "Use Tailwind's responsive utilities to adjust column stacking, spacing, and card sizing for mobile, tablet, and desktop views. Test the board on various devices and screen widths.",
-            "status": "pending"
+            "status": "in-progress"
           },
           {
             "id": 5,
@@ -175,7 +175,7 @@
         "dependencies": [
           3
         ],
-        "status": "pending",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -189,7 +189,7 @@
           3,
           4
         ],
-        "status": "pending",
+        "status": "done",
         "subtasks": []
       },
       {
@@ -308,7 +308,7 @@
     ],
     "metadata": {
       "created": "2025-07-14T17:28:38.964Z",
-      "updated": "2025-07-14T18:23:53.752Z",
+      "updated": "2025-07-14T18:41:47.368Z",
       "description": "Tasks for master context"
     }
   }
