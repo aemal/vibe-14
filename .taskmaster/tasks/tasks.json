@@ -9,7 +9,7 @@
         "testStrategy": "Verify that the project builds without errors. Check that TypeScript compilation succeeds. Ensure all necessary dependencies are installed and the development server runs correctly.",
         "priority": "high",
         "dependencies": [],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
@@ -47,7 +47,7 @@
               3
             ],
             "details": "Set up directories such as `src/` for source code, `public/` for static assets, and ensure configuration files like `tsconfig.json`, `.eslintrc.json`, and `tailwind.config.js` are in the project root.",
-            "status": "in-progress"
+            "status": "done"
           }
         ]
       },
@@ -61,8 +61,47 @@
         "dependencies": [
           1
         ],
-        "status": "pending",
-        "subtasks": []
+        "status": "in-progress",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Research the Drag and Drop Package",
+            "description": "Investigate the available drag and drop packages for React, focusing on their features, community support, and compatibility with TypeScript. Determine whether to use '@hello-pangea/dnd', 'react-beautiful-dnd', or another library based on project requirements.",
+            "dependencies": [],
+            "details": "Review official documentation, example usage, and recent activity for each candidate package. Pay special attention to TypeScript support and integration guides.",
+            "status": "done"
+          },
+          {
+            "id": 2,
+            "title": "Install the Selected Package",
+            "description": "Install the chosen drag and drop package and any required peer dependencies using the project's package manager.",
+            "dependencies": [
+              1
+            ],
+            "details": "Run the appropriate installation command (e.g., npm install @hello-pangea/dnd) and verify that the package appears in the project's dependencies.",
+            "status": "done"
+          },
+          {
+            "id": 3,
+            "title": "Configure TypeScript Types",
+            "description": "Ensure TypeScript compatibility by installing type definitions if necessary and updating tsconfig or import statements as needed.",
+            "dependencies": [
+              2
+            ],
+            "details": "Check if the package includes built-in TypeScript types or if @types/ definitions are required. Adjust TypeScript configuration to recognize the package and resolve any type errors in the IDE.",
+            "status": "in-progress"
+          },
+          {
+            "id": 4,
+            "title": "Integrate DragDropContext into the Layout",
+            "description": "Wrap the relevant part of the React component tree with the DragDropContext component and implement required event handlers.",
+            "dependencies": [
+              3
+            ],
+            "details": "Import DragDropContext from the installed package and wrap the main layout or the section that requires drag-and-drop functionality. Implement at least the onDragEnd handler, and optionally others like onDragStart or onDragUpdate, following the package's documentation.",
+            "status": "pending"
+          }
+        ]
       },
       {
         "id": 3,
@@ -220,7 +259,7 @@
     ],
     "metadata": {
       "created": "2025-07-14T17:28:38.964Z",
-      "updated": "2025-07-14T17:45:19.423Z",
+      "updated": "2025-07-14T17:50:44.408Z",
       "description": "Tasks for master context"
     }
   }
